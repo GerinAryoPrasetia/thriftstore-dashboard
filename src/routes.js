@@ -37,7 +37,7 @@ Coded by www.creative-tim.com
 
 // Material Dashboard 2 React layouts
 import Dashboard from "layouts/dashboard";
-import Billing from "layouts/billing";
+// import Billing from "layouts/billing";
 import RTL from "layouts/rtl";
 import Notifications from "layouts/notifications";
 import Profile from "layouts/profile";
@@ -46,6 +46,7 @@ import SignUp from "layouts/authentication/sign-up";
 import Upload from "layouts/upload";
 // @mui icons
 import Icon from "@mui/material/Icon";
+import ListProduct from "layouts/listProduct";
 
 const routes = [
   {
@@ -66,11 +67,11 @@ const routes = [
   },
   {
     type: "collapse",
-    name: "Billing",
-    key: "billing",
+    name: "List Product",
+    key: "ListProduct",
     icon: <Icon fontSize="small">receipt_long</Icon>,
-    route: "/billing",
-    component: <Billing />,
+    route: "/list-product",
+    component: <ListProduct />,
   },
   {
     type: "collapse",

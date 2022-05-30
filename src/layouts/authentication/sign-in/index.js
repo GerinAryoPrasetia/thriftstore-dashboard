@@ -1,3 +1,5 @@
+/* eslint-disable object-shorthand */
+/* eslint-disable prefer-const */
 /**
 =========================================================
 * Material Dashboard 2 React - v2.1.0
@@ -43,8 +45,31 @@ import bgImage from "assets/images/bg-sign-in-basic.jpeg";
 
 function Basic() {
   const [rememberMe, setRememberMe] = useState(false);
+  // const [email, setEmail] = useState("");
+  // const [password, setPassword] = useState("");
+  // const [phone, setPhone] = useState("");
 
   const handleSetRememberMe = () => setRememberMe(!rememberMe);
+  // let handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   try {
+  //     let res = await fetch("http://localhost:8000/api/product", {
+  //       method: "POST",
+  //       body: JSON.stringify({
+  //         email: email,
+  //         price: price,
+  //         description: desc,
+  //         size: size,
+  //       }),
+  //     });
+  //     let resJson = await res.json();
+  //     if (resJson.status === 200) {
+  //       setMessage("Produk Berhasil Ditambahkan");
+  //     }
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
 
   return (
     <BasicLayout image={bgImage}>
@@ -89,6 +114,7 @@ function Basic() {
             <MDBox mb={2}>
               <MDInput type="password" label="Password" fullWidth />
             </MDBox>
+
             <MDBox display="flex" alignItems="center" ml={-1}>
               <Switch checked={rememberMe} onChange={handleSetRememberMe} />
               <MDTypography
